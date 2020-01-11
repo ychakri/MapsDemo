@@ -1,3 +1,3 @@
 export let cfg = {
-    mapsapi:"https://veerankis.org/test_api/"
+    mapsapi:"Server Call rest api here"
 }
