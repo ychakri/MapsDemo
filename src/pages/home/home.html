@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="map_canvas" #search_address></div>
+  <button ion-button (click)="submitUser()">Update current Location</button>
+  
+ 
+  <ion-card *ngFor="let l of locationAddress" (click)="getLocation(l)">
+    <ion-card-header>
+      {{l.manufacturer}}
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            Name
+          </ion-col>
+          <ion-col col-1>
+            :
+          </ion-col>
+          <ion-col col-8>
+            User {{l.id}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3>
+            Time
+          </ion-col>
+          <ion-col col-1>
+            :
+          </ion-col>
+          <ion-col col-8>
+            {{l.updated}}
+          </ion-col>
+        </ion-row>
+        <button ion-button (click)="getLocation()">Load users Location on map</button>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
